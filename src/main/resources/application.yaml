@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coffee_plus
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    properties:
+      hibernate:
+        globally-quoted-identifiers: true
+        format-sql: true
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+application:
+  security:
+    jwt:
+      secret-key: "5970337336763979244226452948404D635166546A576E5A7234743777217A25"
+      expiration: 3600000
+      refresh-token:
+        expiration: 86400000
