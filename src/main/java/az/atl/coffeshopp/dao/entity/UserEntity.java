@@ -33,6 +33,9 @@ public class UserEntity implements UserDetails{
     @Column(name = "created_date")
     LocalDateTime createdDate;
 
+    Double latitude;
+    Double longitude;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

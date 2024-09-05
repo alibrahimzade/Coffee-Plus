@@ -19,4 +19,7 @@ public class UserDto {
     String phoneNumber;
     String password;
     LocalDateTime createdDate;
+
+    Double latitude;
+    Double longitude;
 }
