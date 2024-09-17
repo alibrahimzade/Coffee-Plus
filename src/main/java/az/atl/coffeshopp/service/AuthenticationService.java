@@ -41,6 +41,7 @@ public class AuthenticationService {
                     .name(request.getName())
                     .surname(request.getSurname())
                     .password(encoder.encode(request.getPassword()))
+                    .balance(0.0)
                     .role(Role.USER)
                     //.createdDate(LocalDateTime.now())
                     .build();

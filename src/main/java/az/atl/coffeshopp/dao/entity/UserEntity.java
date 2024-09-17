@@ -28,6 +28,8 @@ public class UserEntity implements UserDetails{
     String surname;
     String phoneNumber;
     String password;
+    Double balance;
+    String partnership;
     @Enumerated(EnumType.STRING)
     Role role;
     @Column(name = "created_date")

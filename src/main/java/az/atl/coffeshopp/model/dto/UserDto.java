@@ -18,6 +18,8 @@ public class UserDto {
     String surname;
     String phoneNumber;
     String password;
+    Double balance;
+    String partnership;
     LocalDateTime createdDate;
 
     Double latitude;

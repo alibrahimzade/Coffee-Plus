@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class FeaturesDto {
+public class FeatureDto {
     Long id;
     String name;
     Long partnerId;

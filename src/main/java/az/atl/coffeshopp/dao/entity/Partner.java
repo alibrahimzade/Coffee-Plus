@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "partners")
-public class Partners {
+public class Partner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class Partners {
     @OneToMany(mappedBy = "partners",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
-    List<Features> features;
+    List<Feature> features;
     String workingHours;
 
 

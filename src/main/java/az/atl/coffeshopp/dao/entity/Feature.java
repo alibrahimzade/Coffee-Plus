@@ -12,8 +12,8 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "featrues")
-public class Features {
+@Table(name = "features")
+public class Feature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -23,5 +23,5 @@ public class Features {
     @ManyToOne
     @JoinColumn(name = "partner_id",nullable = false)
     @JsonIgnore
-    Partners partners;
+    Partner partner;
 }
